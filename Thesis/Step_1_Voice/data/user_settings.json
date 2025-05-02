@@ -1,0 +1,17 @@
+{
+  "testus": {
+    "user_id": "testus",
+    "target_languages": [
+      "es"
+    ],
+    "native_language": "ru",
+    "voice_gender": "female",
+    "voice_region": "eu",
+    "level": "A1",
+    "interests": [
+      "музыка",
+      "сериалы"
+    ],
+    "active": true
+  }
+}

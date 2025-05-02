@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cart-img { max-height: 80px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Shopping Cart</h1>
+        <div id="cartItems" class="my-4"></div>
+        <div class="card">
+            <div class="card-body">
+                <h4 id="cartTotal">Total: $0.00</h4>
+                <button id="checkout" class="btn btn-success">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script>
+        // Cart functions (must match product-detail.html)
+        function getCart() {
+            const cart = localStorage.getItem('shoppingCart');
+            return cart ? JSON.parse(cart) : {};
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalDiv = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkout');
+
+            function displayCart() {
+                const cart = getCart();
+                cartItemsDiv.innerHTML = '';
+
+                if (Object.keys(cart).length === 0) {
+                    cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+                    cartTotalDiv.textContent = 'Total: $0.00';
+                    return;
+                }
+
+                let total = 0;
+                Object.keys(cart).forEach(productId => {
+                    const product = products.find(p => p.id === parseInt(productId));
+                    const quantity = cart[productId];
+                    const subtotal = product.price * quantity;
+                    total += subtotal;
+
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'card mb-3';
+                    itemDiv.innerHTML = `
+                        <div class="row g-0">
+                            <div class="col-md-2">
+                                <img src="${product.thumbnail}" class="img-fluid cart-img" alt="${product.title}">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5>${product.title}</h5>
+                                    <p>$${product.price.toFixed(2)} × ${quantity}</p>
+                                    <input type="number" min="1" value="${quantity}" 
+                                           data-id="${productId}" class="form-control quantity-input" style="width: 80px;">
+                                    <button class="btn btn-sm btn-danger mt-2 remove-btn" 
+                                            data-id="${productId}">Remove</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <p class="h5">$${subtotal.toFixed(2)}</p>
+                            </div>
+                        </div>
+                    `;
+                    cartItemsDiv.appendChild(itemDiv);
+                });
+
+                cartTotalDiv.textContent = `Total: $${total.toFixed(2)}`;
+
+                // Add event listeners
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.addEventListener('change', function() {
+                        const newQty = parseInt(this.value);
+                        if (newQty >= 1) {
+                            const cart = getCart();
+                            cart[this.dataset.id] = newQty;
+                            saveCart(cart);
+                            displayCart();
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const cart = getCart();
+                        delete cart[this.dataset.id];
+                        saveCart(cart);
+                        displayCart();
+                    });
+                });
+            }
+
+            checkoutBtn.addEventListener('click', function() {
+                localStorage.removeItem('shoppingCart');
+                alert('Thank you for your purchase!');
+                displayCart();
+            });
+
+            displayCart();
+        });
+    </script>
+</body>
+</html>
