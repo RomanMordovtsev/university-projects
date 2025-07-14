@@ -1,0 +1,142 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 14 Pro Case",
+      "description": "Durable and stylish case for iPhone 14 Pro.",
+      "price": 299,
+      "image": "https://cdn-image02.casetify.com/usr/16571/16546571/~v11/32690725x2_iphone-14-pro_16009097.png.1000x1000-r.m80.webp"
+    },
+    {
+      "id": "2",
+      "title": "Samsung Galaxy Case",
+      "description": "Protective case for Samsung Galaxy with shock absorption.",
+      "price": 249,
+      "image": "https://m.media-amazon.com/images/I/71XvI7rHP7L._AC_SX679_.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Wireless Charger",
+      "description": "Fast wireless charger compatible with all Qi devices.",
+      "price": 199,
+      "image": "https://media.istockphoto.com/id/1028116790/tr/foto%C4%9Fraf/yak%C4%B1n-%C3%A7ekim-telefon-radyo-fiyat-istemek-ayg%C4%B1t-%C3%BCzerinde-%C5%9Farj.jpg?s=1024x1024&w=is&k=20&c=urbKywLG1NuCzC3a8-dBf5AWkMSBBdaiPOSAnYgePUc=",
+      "campaign": true
+    },
+    {
+      "id": "4",
+      "title": "Bluetooth Headphones",
+      "description": "Comfortable wireless headphones with rich bass.",
+      "price": 599,
+      "image": "https://media.istockphoto.com/id/1480347688/tr/foto%C4%9Fraf/man-taking-out-a-wireless-earbud-from-charging-box.jpg?s=1024x1024&w=is&k=20&c=EoMQtkMHg9-STPbdfvpS8W68Cv-VNtbr-9zxLqcA8yw=",
+      "campaign": true
+    },
+    {
+      "id": "5",
+      "title": "USB-C Cable",
+      "description": "Durable USB-C cable for fast charging and data transfer.",
+      "price": 89,
+      "image": "https://as1.ftcdn.net/v2/jpg/01/60/74/84/1000_F_160748449_QVbe3UhJvCciQiMfNVDmD7E8gsoSdKyt.jpg",
+      "campaign": true
+    },
+    {
+      "id": "6",
+      "title": "Laptop Stand",
+      "description": "Ergonomic laptop stand to improve posture and cooling.",
+      "price": 399,
+      "image": "https://www.shutterstock.com/shutterstock/photos/2386343541/display_1500/stock-photo-laptop-holder-desk-black-aluminum-metal-isolated-on-white-helps-keep-your-sitting-position-good-2386343541.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Smartwatch Band",
+      "description": "Replaceable smartwatch band compatible with Apple Watch.",
+      "price": 149,
+      "image": "https://www.shutterstock.com/shutterstock/photos/1629380164/display_1500/stock-photo-nova-bana-slovakia-nov-new-apple-watch-series-1629380164.jpg",
+      "campaign": true
+    },
+    {
+      "id": "8",
+      "title": "Power Bank 10000mAh",
+      "description": "Compact and powerful power bank for charging on the go.",
+      "price": 349,
+      "image": "https://avatars.mds.yandex.net/get-marketpic/239999/pic9a8f11146aaaf09c57d8ac8929752c99/orig",
+      "campaign": true
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "1",
+      "title": "Summer Sale",
+      "description": "Up to 50% off selected items.",
+      "image": "https://i.pinimg.com/originals/50/b1/78/50b17859bcb09978bf35ed19666e8d1b.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Tech Weekend",
+      "description": "Exclusive deals on tech gadgets.",
+      "image": "https://sendgrid.com/content/dam/sendgrid/legacy/2019/01/iStock-943304190.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Back to School",
+      "description": "Everything you need for the new semester.",
+      "image": "https://abrakadabra.fun/uploads/posts/2022-01/1642101491_1-abrakadabra-fun-p-pattern-shkolnii-1.png"
+    },
+    {
+      "id": "4",
+      "title": "Power Up!",
+      "description": "Chargers and accessories on sale now.",
+      "image": "https://as2.ftcdn.net/jpg/01/91/63/35/1000_F_191633559_ICn8EiVPOceZI82eMuSrJHtFQA256c0F.jpg",
+      "discountPercentage": 20,
+      "products": [
+        "3",
+        "4",
+        "5",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "shoppingcart": [],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": 1,
+      "username": "Anna",
+      "title": "Stylish and sturdy",
+      "text": "Looks amazing and protects well.",
+      "stars": 5
+    },
+    {
+      "id": "2",
+      "productId": 3,
+      "username": "Ben",
+      "title": "Not bad",
+      "text": "Charging speed is average.",
+      "stars": 3
+    },
+    {
+      "id": "3",
+      "productId": 4,
+      "username": "Carlos",
+      "title": "Excellent sound",
+      "text": "Perfect for work and travel.",
+      "stars": 5
+    },
+    {
+      "id": "4",
+      "productId": 6,
+      "username": "Dana",
+      "title": "Very stable",
+      "text": "Feels solid and looks good on the desk.",
+      "stars": 4
+    },
+    {
+      "id": "0601",
+      "productId": "2",
+      "username": "Roman",
+      "title": "Cool!",
+      "text": "This case is pretty nice",
+      "stars": 5
+    }
+  ]
+}
