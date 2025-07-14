@@ -42,7 +42,7 @@ For my main independent language-learning project powered by AI, check out:
 
 - 📧 Email: *[poma205070@outlook.com]*  
 - 🌐 LinkedIn: *[Roman Mordovtsev]*  
-- 📍 Currently in Istanbul, open to international opportunities
+- 📍 Currently in Saint Petersburg, open to international opportunities
 
 ---
 
